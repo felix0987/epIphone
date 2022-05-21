@@ -12,6 +12,7 @@ class ForgetPassController: UIViewController {
     @IBOutlet private weak var centerContentY: NSLayoutConstraint!
     
     @IBAction private func tapTopCloseKeyboard(_ sender:UITapGestureRecognizer){
+        
         self.view.endEditing(true)
         
     }

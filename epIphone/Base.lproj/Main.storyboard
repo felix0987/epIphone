@@ -31,7 +31,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="XTP-T1-aGb">
                                         <rect key="frame" x="155" y="30" width="64" height="64"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zvf-S0-J6H">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zvf-S0-J6H">
                                         <rect key="frame" x="20" y="255" width="334" height="50"/>
                                         <color key="backgroundColor" red="0.20000000000000001" green="0.4549019608" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -60,7 +60,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="etP-Pa-cbo">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="etP-Pa-cbo">
                                         <rect key="frame" x="20" y="167" width="334" height="50"/>
                                         <color key="backgroundColor" red="0.20000000000000001" green="0.45490196078431372" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -69,6 +69,9 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="emal_input:" destination="n65-EU-KDy" eventType="editingDidEnd" id="b5h-Oe-yVd"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iw5-z9-DpA">
                                         <rect key="frame" x="259" y="464" width="95" height="38"/>
@@ -138,10 +141,13 @@
                     <navigationItem key="navigationItem" id="8nJ-Pd-Z2h"/>
                     <connections>
                         <outlet property="centerContentY" destination="QdN-Ro-78s" id="4Bb-yt-x7t"/>
+                        <outlet property="emailField" destination="etP-Pa-cbo" id="ga0-DZ-EDU"/>
+                        <outlet property="passwordField" destination="zvf-S0-J6H" id="SsA-NS-CQ1"/>
                         <outlet property="viewConten" destination="oe3-F1-wQq" id="wPz-W7-S3d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="n65-EU-KDy" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="vhx-NL-5EY">
                     <connections>
                         <action selector="tapTopCloseKeyboard:" destination="BYZ-38-t0r" id="q6H-g1-rju"/>
@@ -288,7 +294,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="efx-D4-srL"/>
                     <connections>
+                        <outlet property="apellidoField" destination="Z59-q0-P2F" id="VBC-8K-UrR"/>
                         <outlet property="centerContentY" destination="qXP-qt-1s6" id="sxn-Rg-fvu"/>
+                        <outlet property="emailField" destination="Z7X-Bf-pmK" id="Era-uH-Vkc"/>
+                        <outlet property="nameField" destination="qfC-BR-Nwe" id="WgJ-Jb-Ja5"/>
+                        <outlet property="passwordField" destination="qZf-2z-AsC" id="Z29-Xk-Tiw"/>
                         <outlet property="viewConten" destination="5N9-M3-Yme" id="dam-DU-vWO"/>
                     </connections>
                 </viewController>
@@ -301,11 +311,11 @@
             </objects>
             <point key="canvasLocation" x="2757.971014492754" y="62.946428571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Forget Pass Controller-->
         <scene sceneID="8WY-9w-jlo">
             <objects>
-                <viewController id="uag-1g-8ex" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CbP-b8-C8w">
+                <viewController id="uag-1g-8ex" customClass="ForgetPassController" customModule="epIphone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CbP-b8-C8w" customClass="For">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -321,6 +331,9 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="emailField:" destination="3iD-px-BFZ" eventType="editingDidEnd" id="YvM-2d-dz0"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHm-2E-7MV">
                                         <rect key="frame" x="104" y="276" width="150" height="54"/>
@@ -389,9 +402,19 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="gcO-4i-Ncq"/>
+                    <connections>
+                        <outlet property="centerContentY" destination="uGV-1s-OpC" id="cnB-OV-cjq"/>
+                        <outlet property="emailField" destination="Y2k-un-MWC" id="yP5-O5-qgH"/>
+                        <outlet property="viewConten" destination="cLp-Y2-49o" id="0Ru-W8-RJX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GWn-Hd-d05" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="V2O-lM-N4C"/>
+                <exit id="3iD-px-BFZ" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="V2O-lM-N4C">
+                    <connections>
+                        <action selector="tapTopCloseKeyboard:" destination="uag-1g-8ex" id="z3v-gk-oEe"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2758" y="-670"/>
         </scene>

@@ -16,10 +16,37 @@ class RegisterController: UIViewController{
         self.view.endEditing(true)
     }
     
+    @IBOutlet private weak var nameField: UITextField!
+    
+    @IBOutlet private weak var apellidoField: UITextField!
+    
+    @IBOutlet private weak var emailField: UITextField!
+    
+    @IBOutlet private weak var passwordField: UITextField!
+    
+    
     override func viewDidLoad() {
        super.viewDidLoad()
         
-    }
+        nameField.layer.borderWidth =  1
+        nameField.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        nameField.layer.cornerRadius = 20
+        nameField.layer.masksToBounds = true
+        
+        apellidoField.layer.borderWidth =  1
+        apellidoField.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        apellidoField.layer.cornerRadius = 20
+        apellidoField.layer.masksToBounds = true
+        
+        emailField.layer.borderWidth =  1
+        emailField.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        emailField.layer.cornerRadius = 20
+        emailField.layer.masksToBounds = true
+        
+        passwordField.layer.borderWidth =  1
+        passwordField.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        passwordField.layer.cornerRadius = 20
+        passwordField.layer.masksToBounds = true    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

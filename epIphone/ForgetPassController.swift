@@ -13,9 +13,20 @@ class ForgetPassController: UIViewController {
     
     @IBAction private func tapTopCloseKeyboard(_ sender:UITapGestureRecognizer){
         self.view.endEditing(true)
+        
     }
+    
+   
+    @IBOutlet private weak var emailField: UITextField!
+    
+    
        override func viewDidLoad() {
        super.viewDidLoad()
+           emailField.layer.borderWidth =  1
+           emailField.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+           emailField.layer.cornerRadius = 20
+           emailField.layer.masksToBounds = true
+           
         
     }
     

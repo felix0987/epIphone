@@ -9,6 +9,8 @@ import UIKit
 
 class RegisterController: UIViewController{
     
+    
+    
     @IBOutlet private weak var viewConten: UIView!
     @IBOutlet private weak var centerContentY: NSLayoutConstraint!
     

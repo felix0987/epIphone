@@ -20,5 +20,113 @@
             landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6D4CD415-387C-437D-93CC-42F98F4FFAEF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "epIphone/RegisterController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "RegisterController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "6D4CD415-387C-437D-93CC-42F98F4FFAEF - 5b0c1fef1c3511f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "epIphone.RegisterController.passwordField.getter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "epIphone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user209909/Desktop/epCursoIphone/epIphone/epIphone/RegisterController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "6D4CD415-387C-437D-93CC-42F98F4FFAEF - 13ff13a3472365ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "epIphone.RegisterController.passwordField.setter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "epIphone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user209909/Desktop/epCursoIphone/epIphone/epIphone/RegisterController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "6D4CD415-387C-437D-93CC-42F98F4FFAEF - 1700cf8f7174aedd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "epIphone.RegisterController.passwordField.modify : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "epIphone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user209909/Desktop/epCursoIphone/epIphone/epIphone/RegisterController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "6D4CD415-387C-437D-93CC-42F98F4FFAEF - c6c4287cd0dc991b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "epIphone.RegisterController.passwordField.modify : Swift.Optional&lt;__C.UITextField&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "epIphone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user209909/Desktop/epCursoIphone/epIphone/epIphone/RegisterController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "6D4CD415-387C-437D-93CC-42F98F4FFAEF - 7a4357a749fbaec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "epIphone.RegisterController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; epIphone.RegisterController"
+                  moduleName = "epIphone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user209909/Desktop/epCursoIphone/epIphone/epIphone/RegisterController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "300">
+               </Location>
+               <Location
+                  uuid = "6D4CD415-387C-437D-93CC-42F98F4FFAEF - 9c6674b0787f4236"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "epIphone.RegisterController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;epIphone.RegisterController&gt;"
+                  moduleName = "epIphone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user209909/Desktop/epCursoIphone/epIphone/epIphone/RegisterController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "276">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

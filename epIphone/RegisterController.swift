@@ -67,7 +67,7 @@ class RegisterController: UIViewController{
                                                object: nil)
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(Self.keyboardWillHide(_:)),
-                                               name: UIResponder.keyboardDidHideNotification,
+                                               name: UIResponder.keyboardWillHideNotification,
                                                object: nil)
         
     }

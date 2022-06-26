@@ -63,8 +63,9 @@ class LoginController: UIViewController{
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             
             if error != nil {
-                
-            }
+                let alert = Service.createAlertController(title: "Error", message: "ingresa un email valido")
+                self.present(alert, animated: true , completion: nil)
+                return            }
             else {
                 
                 let ContactsController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.ContactsController) as? ContactsController

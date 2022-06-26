@@ -100,8 +100,9 @@ class RegisterController: UIViewController{
         if error != nil {
             
             // There's something wrong with the fields, show error message
-            showError(error!)
-        }
+            let alert = Service.createAlertController(title: "Error", message: "rellena los campos faltantes")
+            self.present(alert, animated: true , completion: nil)
+            return        }
         else {
             
             // Create cleaned versions of the data

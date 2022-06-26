@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,11 +29,11 @@
             <objects>
                 <viewController restorationIdentifier="In" storyboardIdentifier="InCV" id="BYZ-38-t0r" customClass="LoginController" customModule="epIphone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oe3-F1-wQq">
-                                <rect key="frame" x="20" y="280" width="374" height="515"/>
+                                <rect key="frame" x="20" y="247.5" width="374" height="515"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sign in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4u-6a-BvT">
                                         <rect key="frame" x="125" y="94" width="117" height="40"/>
@@ -181,11 +182,11 @@
             <objects>
                 <viewController id="OQ4-jG-C2l" customClass="RegisterController" customModule="epIphone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hnb-Ta-dM9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5N9-M3-Yme">
-                                <rect key="frame" x="20" y="385.5" width="374" height="483"/>
+                                <rect key="frame" x="20" y="348" width="374" height="483"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already Have An Account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUe-Yu-F40">
                                         <rect key="frame" x="0.0" y="444" width="232" height="24"/>
@@ -316,7 +317,7 @@
                                 </constraints>
                             </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pzW-HY-aj9">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <items>
                                     <navigationItem title="Sign Up" id="SJ6-hJ-qNG">
                                         <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.backward" catalog="system" id="UQ9-lw-U26">
@@ -370,11 +371,11 @@
             <objects>
                 <viewController id="uag-1g-8ex" customClass="ForgetPassController" customModule="epIphone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CbP-b8-C8w" customClass="View" customModule="FirebaseAnalyticsSwift">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cLp-Y2-49o">
-                                <rect key="frame" x="30" y="272.5" width="354" height="351"/>
+                                <rect key="frame" x="30" y="245.5" width="354" height="351"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y2k-un-MWC">
                                         <rect key="frame" x="20" y="196" width="314" height="50"/>
@@ -439,7 +440,7 @@
                                 </constraints>
                             </view>
                             <navigationBar contentMode="scaleToFill" backIndicatorImage="arrow.backward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qS8-ct-Ner">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <items>
                                     <navigationItem title="Forgot Password" leftItemsSupplementBackButton="YES" id="gcO-4i-Ncq">
                                         <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.backward" catalog="system" id="ANZ-Ll-LcP">
@@ -473,6 +474,7 @@
                             <outletCollection property="gestureRecognizers" destination="V2O-lM-N4C" appends="YES" id="LWW-el-Zul"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="XIw-bl-3Vh"/>
                     <connections>
                         <outlet property="centerContentY" destination="Dep-ir-UWI" id="3er-Qy-tV8"/>
                         <outlet property="emailField" destination="Y2k-un-MWC" id="yP5-O5-qgH"/>
@@ -505,7 +507,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="blG-or-IIw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="486" y="-44"/>
+            <point key="canvasLocation" x="559" y="-683"/>
         </scene>
         <!--Contacts Controller-->
         <scene sceneID="Unp-95-nTm">
@@ -516,36 +518,81 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="perfil" translatesAutoresizingMaskIntoConstraints="NO" id="ePr-3O-N16">
-                                <rect key="frame" x="27" y="61" width="60" height="60"/>
+                                <rect key="frame" x="9" y="79" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contactos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1W-yM-Fxk">
-                                <rect key="frame" x="138" y="233" width="139" height="35"/>
+                                <rect key="frame" x="138" y="213" width="139" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D4a-zc-GHO">
-                                <rect key="frame" x="63" y="150" width="289" height="44"/>
+                                <rect key="frame" x="63" y="149" width="289" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMd-yL-SGS">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem title="chats" id="YzJ-Xa-NkG">
+                                        <imageReference key="image" image="message.fill" catalog="system" symbolScale="large"/>
+                                        <color key="badgeColor" red="0.20000000000000001" green="0.4549019608" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="People" image="person.3" catalog="system" id="GH8-4Z-B0U"/>
+                                    <tabBarItem title="calls" id="COp-Ou-Hgf">
+                                        <imageReference key="image" image="phone.fill" catalog="system" symbolScale="large"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="Account" image="person.fill" catalog="system" id="Feg-16-0n1"/>
+                                </items>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tabBar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hDq-v7-JdM">
+                                <rect key="frame" x="0.0" y="35" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Contactos" id="Fvb-Mh-W0f">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.backward" catalog="system" id="jAO-3s-isU">
+                                            <connections>
+                                                <action selector="back:" destination="sF9-45-xtI" id="lP9-Ge-i9n"/>
+                                                <segue destination="BYZ-38-t0r" kind="presentation" id="os5-uk-flt"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TWH-kd-EfM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hDq-v7-JdM" firstAttribute="leading" secondItem="TWH-kd-EfM" secondAttribute="leading" id="Jor-zi-N2O"/>
+                            <constraint firstItem="hDq-v7-JdM" firstAttribute="trailing" secondItem="TWH-kd-EfM" secondAttribute="trailing" id="vqg-44-IGX"/>
+                            <constraint firstItem="hDq-v7-JdM" firstAttribute="top" secondItem="tNZ-NT-4Kb" secondAttribute="top" constant="35" id="zSN-KQ-LrO"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="SYb-ca-Rib"/>
+                    <connections>
+                        <outlet property="backButton" destination="jAO-3s-isU" id="JLI-hl-w1T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xlR-17-gtk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1813" y="410"/>
+            <point key="canvasLocation" x="983" y="109"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="os5-uk-flt"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="logo" width="64" height="64"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
         <image name="perfil" width="60" height="60"/>
+        <image name="person.3" catalog="system" width="128" height="62"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

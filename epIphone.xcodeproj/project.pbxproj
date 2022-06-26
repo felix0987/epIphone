@@ -64,6 +64,7 @@
 		9529526528678FA2006D51EB /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				95A5D9BF2857C99C0056E330 /* Services.swift */,
 				9529526628678FE0006D51EB /* Utilities.swift */,
 				9529526A28679D2B006D51EB /* Constants.swift */,
 			);
@@ -117,7 +118,6 @@
 				95FE6ECC28318033001AE913 /* LaunchScreen.storyboard */,
 				95FE6ECF28318033001AE913 /* Info.plist */,
 				95A5D9A028574C7F0056E330 /* GoogleService-Info.plist */,
-				95A5D9BF2857C99C0056E330 /* Services.swift */,
 			);
 			path = epIphone;
 			sourceTree = "<group>";

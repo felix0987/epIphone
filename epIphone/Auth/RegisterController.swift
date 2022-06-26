@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
+
 
 class RegisterController: UIViewController{
     
-    
+   
     
     @IBOutlet private weak var viewConten: UIView!
     @IBOutlet private weak var centerContentY: NSLayoutConstraint!
@@ -25,6 +28,20 @@ class RegisterController: UIViewController{
     @IBOutlet private weak var emailField: UITextField!
     
     @IBOutlet private weak var passwordField: UITextField!
+    
+    
+    @IBAction func backButton(_ sender: Any) {
+        navigationController?.popViewController(animated: true)    }
+    
+    
+    @IBAction func InView(_ sender: Any) {
+        
+        let LoginController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.LoginController) as? LoginController
+        
+        view.window?.rootViewController = LoginController
+        view.window?.makeKeyAndVisible()
+    }
+    @IBOutlet weak var singUpButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -58,6 +75,85 @@ class RegisterController: UIViewController{
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.unRegisterKeyboardNotication()
+    }
+    func validateField() -> String? {
+        if nameField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            apellidoField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            passwordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            
+            return "Please fill all field"
+        }
+        let cleanedPassword = passwordField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if   Utilities.isPasswordValid(cleanedPassword) == false {
+            return "Please make sure your password is at least is at least 8 characters ,contains a special contains a special character and a nomber"
+        }
+        
+        return nil
+    }
+ 
+    @IBAction func buttonSignUp(_ sender: Any) {
+        
+        let error = validateField()
+        
+        if error != nil {
+            
+            // There's something wrong with the fields, show error message
+            showError(error!)
+        }
+        else {
+            
+            // Create cleaned versions of the data
+            let firstName = nameField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let lastName = apellidoField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let email = emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            // Create the user
+            Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
+                
+                // Check for errors
+                if err != nil {
+                    
+                    // There was an error creating the user
+                    self.showError("Error creating user")
+                }
+                else {
+                    
+                    // User was created successfully, now store the first name and last name
+                    let db = Firestore.firestore()
+                    
+                    db.collection("users").addDocument(data: ["firstname":firstName, "lastname":lastName, "uid": result!.user.uid ]) { (error) in
+                        
+                        if error != nil {
+                            // Show error message
+                            self.showError("Error saving user data")
+                        }
+                    }
+                    
+                    // Transition to the home screen
+                    self.transitionToHome()
+                }
+                
+            }
+            
+            
+            
+        }
+    }
+    
+    func showError(_ message:String) {
+        
+    }
+    
+    func transitionToHome() {
+        
+        let ContactsController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.ContactsController) as? ContactsController
+        
+        view.window?.rootViewController = ContactsController
+        view.window?.makeKeyAndVisible()
+        
     }
     
     private func registerKeyboardNotification(){

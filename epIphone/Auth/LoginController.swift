@@ -6,6 +6,11 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseAuth
+
+
+
 
 class LoginController: UIViewController{
 
@@ -18,6 +23,9 @@ class LoginController: UIViewController{
     @IBOutlet private weak var passwordField: UITextField!
     
     @IBOutlet private weak var emailField: UITextField!
+    
+    
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +41,7 @@ class LoginController: UIViewController{
         passwordField.layer.masksToBounds = true
         
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.registerKeyboardNotification()
@@ -42,6 +51,31 @@ class LoginController: UIViewController{
         super.viewWillDisappear(animated)
         self.unRegisterKeyboardNotication()
     }
+    
+    @IBAction func loginTapped(_ sender: Any) {
+        // TODO: Validate Text Fields
+        
+        // Create cleaned versions of the text field
+        let email = emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = passwordField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        // Signing in the user
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            
+            if error != nil {
+                
+            }
+            else {
+                
+                let ContactsController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.ContactsController) as? ContactsController
+                
+                self.view.window?.rootViewController = ContactsController
+                self.view.window?.makeKeyAndVisible()
+            }
+        }
+    }
+    
+    
     
     private func registerKeyboardNotification(){
         NotificationCenter.default.addObserver(self,
@@ -76,6 +110,8 @@ class LoginController: UIViewController{
         }
         
     }
+    
+
     
     
     

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 class ForgetPassController: UIViewController {
     
     @IBOutlet private weak var viewConten: UIView!
@@ -17,8 +18,31 @@ class ForgetPassController: UIViewController {
         
     }
     
+    
+    
+    
+    @IBAction func buttonBack(_ sender: Any) {
+        navigationController?.popViewController(animated: true)    }
+    
    
     @IBOutlet private weak var emailField: UITextField!
+    
+    
+    @IBAction func forget(_ sender: UIButton) {
+        let auth = Auth.auth()
+        
+        auth.sendPasswordReset(withEmail: emailField.text!) { (error) in
+            if let error = error {
+              let alert = Service.createAlertController(title: "Error", message: error.localizedDescription)
+              self.present(alert, animated: true , completion: nil)
+              return
+           }
+              let alert = Service.createAlertController(title: "Email validado", message: "se envio un correo para cambiar de contraseña")
+              self.present(alert, animated: true, completion: nil)
+            
+        }
+    }
+    
     
     
        override func viewDidLoad() {
@@ -40,6 +64,8 @@ class ForgetPassController: UIViewController {
         super.viewWillDisappear(animated)
         self.unRegisterKeyboardNotication()
     }
+    
+    
     
     private func registerKeyboardNotification(){
         NotificationCenter.default.addObserver(self,
@@ -74,6 +100,7 @@ class ForgetPassController: UIViewController {
         }
         
     }
+    
     
     
     
